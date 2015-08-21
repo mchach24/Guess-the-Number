@@ -1,0 +1,19 @@
+body {
+    background-color: #E0E0E0;
+}
+
+#textDiv {
+    background-color: #BDBDBD;
+    margin: auto;
+    width: 60%;
+    border:3px solid #212121; /*#8AC007; */
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+#message {
+    height: auto;
+    width: auto;
+    font-family: arial;
+}
