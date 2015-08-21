@@ -1,1 +1,21 @@
-Guess the Number
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Guess the Number</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="style.css" rel="stylesheet">
+</head>
+<body>
+    <div id="textDiv">
+        
+        <p id="message">Guess the Number!</p>
+        <div id="input-form">
+            <input type="text" value="Type your guess!" class="input" id="text-field"></input>
+            <button type="button" class="btn" onclick="guessNumber(document.getElementById('text-field').value)">Guess!</button>
+        </div>
+    
+    </div>
+    
+    <script src="guess.js"></script>
+</body>
+</html>
