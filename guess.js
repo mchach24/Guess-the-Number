@@ -1,8 +1,11 @@
 function initialize() {
     guessCorrect = false;
-    number = Math.floor((Math.random() * 10) + 1);
-    paragraph = document.getElementById("message");
     tries = 0;
+    number = Math.floor((Math.random() * 10) + 1);
+    paragraph = document.getElementById('message');
+    textField = document.getElementById('text-field');
+    paragraph.innerHTML = "Guess the Number!";
+    textField.innerHTML = ""
 }
 
 initialize();
@@ -14,11 +17,12 @@ function guessNumber(guess) {
         if (guess.match(/[^0-9]/i)) {
             paragraph.innerHTML = guess + " contains characters that are not recognized. Pick a number between 1 and 10.";
             tries--;
-            document.getElementById('text-field').value = "";
+            textField.value = "";
             return;
         }
         if (guess > 10 || guess < 1 ) {
 			paragraph.innerHTML = guess + " was out of the range! Pick a number between 1 and 10.";
+            tries--;
 		}
 		else if (guess == number) {
 			paragraph.innerHTML = guess + " was correct! You win! It took you " + tries + " tries!"
@@ -30,7 +34,7 @@ function guessNumber(guess) {
 		else {
 			paragraph.innerHTML = guess + " was too high! Try again!";
 		}
-        document.getElementById('text-field').value = "";
+        textField.value = "";
 	}
 }
 

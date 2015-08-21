@@ -9,9 +9,11 @@
     <div id="textDiv">
         
         <p id="message">Guess the Number!</p>
+        
         <div id="input-form">
             <input type="text" value="Type your guess!" class="input" id="text-field" onkeydown="if (event.keyCode == 13) document.getElementById('guessButton').click()" onclick="document.getElementById('text-field').value = ''"></input>
             <button id="guessButton" type="button" class="btn" onclick="guessNumber(document.getElementById('text-field').value)">Guess!</button>
+            <button id="resetButton" type="button" class="btn" onclick="initialize()">Play Again!</button>
         </div>
     
     </div>
