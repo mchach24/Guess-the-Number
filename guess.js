@@ -81,7 +81,6 @@ function algorithmGuess(from,to) {
         if (paragraph.innerHTML.match(/win/i)) {
             paragraph.innerHTML = "The computer's guess, " + computerGuess + ", was correct. It took the computer " + tries + " tries to guess the number correctly.";
             numberOfTries.push(tries);
-            paragraph.innerHTML = paragraph.innerHTML + numberOfTries;
             return;
         }
         else if (paragraph.innerHTML.match(/low/i)) {
@@ -93,7 +92,7 @@ function algorithmGuess(from,to) {
             setTimeout(returnHigh,2000);
         }
         else {
-            //paragraph.innerHTML = "It seems that an error has occurred. Please try again.";
+            paragraph.innerHTML = "It seems that an error has occurred. Please try again.";
             return;
         }
     }
