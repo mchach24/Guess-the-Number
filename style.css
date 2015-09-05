@@ -1,8 +1,11 @@
 body {
     background-color: #E0E0E0;
+    -webkit-user-select: none; /* Chrome/Safari */ 
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+ */
 }
 
-#textDiv {
+.container {
     background-color: #BDBDBD;
     margin: auto;
     width: 60%;
@@ -10,10 +13,14 @@ body {
     padding: 10px;
     text-align: center;
     border-radius: 5px;
+    font-family: arial;
 }
 
-#message {
+#output {
     height: auto;
     width: auto;
     font-family: arial;
+}
+
+#guessInput {
 }

@@ -2,19 +2,45 @@
 <html>
 <head>
 	<title>Guess the Number</title>
+    
+    <!-- external links/scripts for Bootstrap + jQuery
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> -->
+    
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
     <link href="style.css" rel="stylesheet">
 </head>
-<body>
-    <div id="textDiv">
+<body unselectable="on">
+    <div class="container" id="containerDiv">
         
-        <p id="message">Guess the Number!</p>
+        <p id="output">Choose the range that you want to guess in!</p>
         
-        <div id="input-form">
-            <input type="text" value="Type your guess!" class="input" id="text-field"></input>
-            <button id="guessButton" type="button" class="btn">Guess!</button>
-            <button id="resetButton" type="button" class="btn">Play Again!</button>
-            <button id="autoGuessButton" type="button" class = "btn">Have the Computer Guess</button>
+        <div class="input-group" id="rangeForm">
+            
+            <strong>From:</strong>
+            <input class="input" id="fromIntInput" type="number" value="1"></input>
+            <strong>To:</strong>
+            <input class="input" id="toIntInput" type="number" value="10"></input>
+            <button class="btn" id="rangeButton" type="button">Play!</button>
+    
+        </div>
+        
+        <!-- guessInput hidden on load -->
+        <div class="input-group" id="guessForm">
+            
+            <input class="input" id="guessInput" type="text" placeholder="Type your guess!"></input>
+            <button class="btn" id="guessButton" type="button">Guess!</button>
+            <button class="btn" id="resetButton" type="button">Play Again!</button>
+            <button class="btn" id="autoGuessButton" type="button">Have the Computer Guess</button>
+            
+            <div class="sub-input-group" id="secretInputGroup">  
+                <p>Argh! You've found me treasure!</p>
+                <input class="input" id="rapidNumberInput" type="number" placeholder="Algorithm Runs"></input>
+                <button class="btn" id="rapidAutoGuessButton" type="button">Rapid Computer Guess</button>
+                <button class="btn" id="showMoreSecrets" type="button">Show More Fantastic Features</button>
+            </div>
+    
         </div>
     
     </div>
