@@ -14,13 +14,57 @@ body {
     text-align: center;
     border-radius: 5px;
     font-family: arial;
+    margin-bottom: 10px;
 }
 
-#output {
+.btn {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  cursor: pointer;
+  padding: 5px 10px;
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font: normal normal bold 16px/normal Arial, Helvetica, sans-serif;
+  color: #666666;
+  -o-text-overflow: clip;
+  text-overflow: clip;
+  background: #f6f6f6;
+}
+
+.btn:hover {
+	background-color: #ededed;
+}
+
+.btn:active {
+	position: relative;
+	top: 1px;
+}
+
+.input {
+  display: inline-block;
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  padding: 5px;
+  border: 1px solid #dcdcdc;
+  -webkit-border-radius: 5px;
+  border-radius: 5px;
+  font: normal 16px/normal Arial, Helvetica, sans-serif;
+  color: rgba(102,102,102,1);
+  -o-text-overflow: ellipsis;
+  text-overflow: ellipsis;
+  background: rgb(255,255,255);
+}
+
+p {
     height: auto;
     width: auto;
-    font-family: arial;
+    font: normal 16px/normal Arial, Helvetica, sans-serif;
 }
 
-#guessInput {
+.clockParagraph {
+    font-size: 1.5em;
 }
